@@ -1,2 +1,2 @@
-# Algorithm-Study-
-Algorithm-Study Public
+# Algorithm-Study
+Algorithm-Study 
