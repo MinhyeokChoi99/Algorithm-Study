@@ -22,6 +22,6 @@ class Solution
         	answer++;
         }
 
-        return answer;
+        return answer; // 프로그래머스 
     }
 }
