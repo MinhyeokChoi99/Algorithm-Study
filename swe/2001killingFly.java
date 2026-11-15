@@ -22,13 +22,13 @@ class Solution
             
             int killing = 0;
             maxKilling = 0;
-            for(int i = 0; i < N - M; i++){
-                for(int j = 0; j < N - M; j++) {
+            for(int i = 0; i <= N - M; i++){
+                for(int j = 0; j <= N - M; j++) {
                     if(killing > maxKilling) maxKilling = killing;
                     killing = 0;
-                    for(int k = 0; j < M; j++) {
+                    for(int k = 0; k < M; j++) {
                         for(int l = 0; l < M; l++) {
-                            killing += fliyMap[k][l];
+                            killing += fliyMap[i+k][j+l];
                         } //forl
                     } //fork
                 } //forj
