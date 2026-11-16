@@ -35,3 +35,7 @@ class Solution
 		} //for
 	} //main
 } // class
+
+/*
+시간복잡도 O(n · 2^n)
+*/
