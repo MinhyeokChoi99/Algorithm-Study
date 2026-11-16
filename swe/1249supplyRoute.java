@@ -55,3 +55,9 @@ class Solution
 		} // for
 	} // main
 } //class
+
+/*
+O(E log V)
+간선 수나 노드 수나 모두 N^2에 비례
+N^2 * log N^2 -> O(N^2 * log N)
+*/
