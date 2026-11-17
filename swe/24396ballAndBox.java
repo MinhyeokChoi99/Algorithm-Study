@@ -18,8 +18,8 @@ class Solution
             int Z = sc.nextInt();            
             
             int answer = Integer.MIN_VALUE;
-            for(int i = 0; i < B; i ++) {
-                int sum = X * i + W * Y + (B - i) * Z;
+            for(int i = 0; i <= B; i ++) {
+                int sum = X * i + (W - B + i)* Y + 2 * (B - i) * Z;
                 answer = Math.max(answer,sum);
             }
             System.out.println(answer);
