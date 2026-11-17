@@ -19,6 +19,7 @@ class Solution
             
             int answer = Integer.MIN_VALUE;
             for(int i = 0; i <= B; i ++) {
+                if(i < B - W) continue;
                 int sum = X * i + (W - B + i)* Y + 2 * (B - i) * Z;
                 answer = Math.max(answer,sum);
             }
@@ -26,3 +27,7 @@ class Solution
 		} //test
 	} //main
 } // class
+
+/*
+시간 복잡도 O(B)
+*/
