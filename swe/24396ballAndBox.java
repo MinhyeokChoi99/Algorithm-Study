@@ -11,12 +11,18 @@ class Solution
 		T=sc.nextInt();
 		for(int test_case = 1; test_case <= T; test_case++)
 		{
-		int B = sc.nextInt();
-		int W = sc.nextInt();
-		int X = sc.nextInt();
-		int Y = sc.nextInt();
-		int Z = sc.nextInt();            
-
+            int B = sc.nextInt();
+            int W = sc.nextInt();
+            int X = sc.nextInt();
+            int Y = sc.nextInt();
+            int Z = sc.nextInt();            
+            
+            int answer = Integer.MIN_VALUE;
+            for(int i = 0; i < B; i ++) {
+                int sum = X * i + W * Y + (B - i) * Z;
+                answer = Math.max(answer,sum);
+            }
+            System.out.println(answer);
 		} //test
 	} //main
 } // class
