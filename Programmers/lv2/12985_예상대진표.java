@@ -10,18 +10,18 @@ class Solution
         	if(a % 2 == 0) {
         		a /= 2;
         	} else {
-        		a = a / 2 + 1;
+        		a = (a + 1) / 2;
         	}
         	
         	if(b % 2 == 0) {
         		b /= 2;
         	} else {
-        		b = b / 2 + 1;
+        		b = (b + 1) / 2;
         	}
         	
         	answer++;
         }
 
-        return answer; // 프로그래머스 
+        return answer;
     }
 }
