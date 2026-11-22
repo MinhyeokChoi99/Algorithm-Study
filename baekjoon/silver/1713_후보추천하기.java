@@ -57,3 +57,7 @@ class Main {
         // 학생 번호를 ASC로 출력
     }//main
 }//solution
+
+/*
+시간복잡도 O(V * N) V는 투표 수 N은 후보 수
+*/
