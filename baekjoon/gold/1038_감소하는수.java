@@ -19,8 +19,11 @@ class Main {
                     list.add(numbs[j]);
                 }
             }//for
-            list.sort();
-            total.add(list);
+            
+            if(!list.isEmpty()) {
+                list.sort();
+                total.add(list);                
+            }
         }//for
         
     }//main
