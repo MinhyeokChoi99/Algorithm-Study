@@ -1,13 +1,16 @@
 import java.util.*;
 
 class Main {
-    public static void main(String[args]) {
+    public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int N = sc.nextInt();
         
         int[] numbs = new int[] {0,1,2,3,4,5,6,7,8,9};
         
-        if(N >= 1024) return -1;
+        if(N >= 1023) {
+            System.out.println(-1);
+            return;
+        } 
 
         List<List<Integer>> total = new ArrayList<>();        
 
@@ -21,10 +24,29 @@ class Main {
             }//for
             
             if(!list.isEmpty()) {
-                list.sort();
+                list.sort( (a,b) -> b - a );
                 total.add(list);                
             }
         }//for
+        
+        total.sort( (a,b) -> {
+            if(a.size() != b.size()) return a.size() - b.size();
+            
+            for(int i = 0; i < a.size(); i ++) {
+                int com = a.get(i);
+                int pare = b.get(i);
+                
+                if(com != pare) return com - pare;
+            }
+            return 0;
+        });
+        
+        List<Integer> answer = total.get(N);
+        StringBuilder sb = new StringBuilder();
+        for(int n : answer) {
+            sb.append(n);
+        }
+        System.out.println(sb);
         
     }//main
 }//Main
