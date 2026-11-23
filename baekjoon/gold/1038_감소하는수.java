@@ -9,13 +9,18 @@ class Main {
         
         if(N >= 1024) return -1;
 
+        List<List<Integer>> total = new ArrayList<>();        
+
         for(int i = 0; i < (1 << 10); i++) {
+            List<Integer> list = new ArrayList<>();
             for(int j = 0; j < 10; j ++) {
                 int check = (i & (1 << j));
                 if(check != 0) {
-                    
+                    list.add(numbs[j]);
                 }
             }//for
+            list.sort();
+            total.add(list);
         }//for
         
     }//main
