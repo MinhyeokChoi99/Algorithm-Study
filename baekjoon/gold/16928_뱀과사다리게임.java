@@ -1,14 +1,20 @@
+import java.util.*;
+
 class Main{
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int N = sc.nextInt();
         int M = sc.nextInt();        
         
-        int[] board = new int[100];
-        
+        int[] board = new int[101];
+        boolean[] visited = new boolean[101];
+        Deque<int[]> q = new ArrayDeque<>();
+        Map<Integer, Integer> map = new HashMap<>();
         for(int i = 0; i < N + M; i ++) {
-            
+            map.put(sc.nextInt(), sc.nextInt());
         }
+        
+        
         
     }
 }
