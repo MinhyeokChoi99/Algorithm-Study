@@ -38,7 +38,6 @@ class Main{
         
         StringBuilder sb = new StringBuilder();
 
-        int[][] board = new int[maxR - minR][maxC - minC];
         for(int i = minR; i <= maxR; i ++) {
             for(int j = minC; j <= maxC; j++) {
                 if(visited[i][j]) {
