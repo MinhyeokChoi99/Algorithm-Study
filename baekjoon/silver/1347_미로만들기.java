@@ -5,26 +5,22 @@ class Main{
         Scanner sc = new Scanner(System.in);
         int N = sc.nextInt(); // 커맨드 길이
         String s = sc.nextLine();
-        List<char> list = new ArrayList<>();
-        for(int i = 0; i < N; i ++) {
-            list.add(s.charAt(0));
-        }
         boolean[][] visited = new boolean[101][101];
         int[] dir = new int[] {1,2,3,4} // 남 서 북 동 
-        curDir = 1;
+        int curDir = 1;
         
-        minR = 51;
-        maxR = 51;
-        minC = 51;
-        maxC = 51;
+        int minR = 51;
+        int maxR = 51;
+        int minC = 51;
+        int maxC = 51;
         visited[51][51] = true;
         
         for(int i = 0; i < N; i ++) {
-            if(list.get(i) == 'R') {
+            if(s.charAt(i) == 'R') {
                 
-            } else if(list.get(i) == 'C') {
+            } else if(s.charAt(i) == 'C') {
                 
-            } else if(list.get(i) == 'F') {
+            } else if(s.charAt(i) == 'F') {
                 
             }
         }
