@@ -41,11 +41,18 @@ class Main{
         int r = maxR - minR;
         int c = maxC - minC;
         int[][] board = new int[r][c];
-        for(int i = 0; i < r; i ++) {
-            for(int j = 0; j < c; j++) {
-             
+        for(int i = minR; i < r; i ++) {
+            for(int j = minC; j < c; j++) {
+                if(visited[i][j]) {
+                    sb.append(".");
+                } else {
+                    sb.append("#");
+                }
             }
+            sb.append("\n");
         }
+        
+        System.out.println(sb);
         
     }//main
 }//class
