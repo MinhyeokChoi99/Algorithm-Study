@@ -13,7 +13,15 @@ class Main{
         for(int i = 0; i < N + M; i ++) {
             map.put(sc.nextInt(), sc.nextInt());
         }
-        
+        q.add(new int[] {1,0});
+        visited[1] = true;
+        while(!q.isEmpty()) {
+            int[] cur = q.poll();
+            
+            if(cur[0] == 100) return cur[1];
+            
+            
+        }
         
         
     }
