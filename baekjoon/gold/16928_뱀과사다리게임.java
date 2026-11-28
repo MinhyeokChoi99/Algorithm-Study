@@ -6,7 +6,6 @@ class Main{
         int N = sc.nextInt();
         int M = sc.nextInt();        
         
-        int[] board = new int[101];
         boolean[] visited = new boolean[101];
         Deque<int[]> q = new ArrayDeque<>();
         Map<Integer, Integer> map = new HashMap<>();
@@ -18,11 +17,23 @@ class Main{
         while(!q.isEmpty()) {
             int[] cur = q.poll();
             
-            if(cur[0] == 100) return cur[1];
+            if(cur[0] == 100) {
+                System.out.println(cur[1]);
+                return;
+            }
             
-            
-        }
+            for(int i = 1; i <= 6; i ++) {
+                int next = cur[0] + i;
+                if(map.get(next) != null) {
+                    next = map.get(next);
+                }
+                if(next <= 100 && !visited[next]) {
+                    visited[next] = true;
+                    q.add(new int[] {next,cur[1] + 1});
+                }
+            }
+        }//while
         
         
-    }
-}
+    }//main
+}//class
