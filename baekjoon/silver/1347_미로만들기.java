@@ -7,11 +7,10 @@ class Main{
         sc.nextLine();
         String s = sc.nextLine();
         boolean[][] visited = new boolean[101][101];
-        int[] dir = new int[] {0,1,2,3}; // 남 서 북 동 
-        int[] dr = {-1,0,1,0};
+        int[] dr = {1,0,-1,0};
         int[] dc = {0,-1,0,1};
         
-        int curDir = 1;
+        int curDir = 0;
         int curR = 50;
         int curC = 50;
         
@@ -23,12 +22,12 @@ class Main{
         
         for(int i = 0; i < N; i ++) {
             if(s.charAt(i) == 'R') {
-                curDir = (curDir + 1) / 4;
+                curDir = (curDir + 1) % 4;
             } else if(s.charAt(i) == 'L') {
-                curDir = (curDir + 3) / 4;
+                curDir = (curDir + 3) % 4;
             } else if(s.charAt(i) == 'F') {
-                curR = curR + dir[curDir];
-                curC = curC + dir[curDir];
+                curR = curR + dr[curDir];
+                curC = curC + dc[curDir];
                 visited[curR][curC] = true;
                 minR = Math.min(minR, curR);
                 minC = Math.min(minC, curC);
@@ -38,11 +37,10 @@ class Main{
         }
         
         StringBuilder sb = new StringBuilder();
-        int r = maxR - minR;
-        int c = maxC - minC;
-        int[][] board = new int[r][c];
-        for(int i = minR; i < r; i ++) {
-            for(int j = minC; j < c; j++) {
+
+        int[][] board = new int[maxR - minR][maxC - minC];
+        for(int i = minR; i <= maxR; i ++) {
+            for(int j = minC; j <= maxC; j++) {
                 if(visited[i][j]) {
                     sb.append(".");
                 } else {
@@ -52,7 +50,7 @@ class Main{
             sb.append("\n");
         }
         
-        System.out.println(sb);
+        System.out.print(sb);
         
     }//main
 }//class
